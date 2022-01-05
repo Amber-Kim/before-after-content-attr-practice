@@ -1,0 +1,67 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Google Web Fonts CDN */
+@import url('htmls://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700,900&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: #222;
+    line-height: 1.5em;
+    font-weight: 300;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+.gnb a {
+    width: 300px;
+    height: 40px;
+    display: block;
+    position: relative;
+    overflow: hidden
+    
+}
+
+.gnb a:before,
+.gnb a:after {
+    content:attr(data-text);
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    text-align: center;
+    line-height: 40px; /* 높이와 같아야함 */
+    color: #fff;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.gnb a:before {
+    background-color: crimson;
+    top: 0;
+}
+
+.gnb a:after {
+    background-color: royalblue;
+    top: 100%;
+}
+
+.gnb a:hover:before {
+    top: -100%;
+}
+
+.gnb a:hover:after {
+    top: 0;
+}
+
+
